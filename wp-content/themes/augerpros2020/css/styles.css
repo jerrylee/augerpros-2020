@@ -38,6 +38,22 @@ hr.divider-red {
   margin-top: 0;
 }
 
+.red {
+	color: #861316;
+}
+
+.cta {
+	background-color: #861316;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+	margin-bottom: 1rem;
+}
+
+.cta ul {
+	text-align: left;
+}
+
 .top-bar {
   background-color: #861316;
   color: #fff;
@@ -560,36 +576,91 @@ hr.divider-red {
 
 #professional .right .cta-box {
   text-align: center;
-  font-size: 1.25rem;
+}
+
+#professional .right .cta-box a {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.2;
   font-weight: 700;
+  background-color: #861316;
   color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 0.5rem;
+  -webkit-transition: color 0.5s ease 0s;
+  -o-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
+  z-index: 1;
   width: 65%;
 }
 
-@media only screen and (min-width: 992px) {
-  #professional .right .cta-box {
-    padding: 0 1.5rem;
-  }
-}
-
-#professional .right .cta-box a:link, #professional .right .cta-box a:visited, #professional .right .cta-box a:focus {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #861316;
-  color: #fff;
-  padding: 1rem;
-  outline: none;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-#professional .right .cta-box a:link:hover, #professional .right .cta-box a:visited:hover, #professional .right .cta-box a:focus:hover {
-  background-color: #f2f2f2;
+#professional .right .cta-box a:hover {
   color: #861316;
 }
 
+#professional .right .cta-box a::before {
+  background-color: #c0c0c0;
+  content: '';
+  position: absolute;
+  height: -webkit-calc(100% + 1rem);
+  height: calc(100% + 1rem);
+  width: -webkit-calc(100% + 1rem);
+  width: calc(100% + 1rem);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  will-change: transform;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: opacity 0.25s ease 0.1s, -webkit-transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s;
+  transition: opacity 0.25s ease 0.1s, -webkit-transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s;
+  -o-transition: transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s, opacity 0.25s ease 0.1s;
+  transition: transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s, opacity 0.25s ease 0.1s;
+  transition: transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s, opacity 0.25s ease 0.1s, -webkit-transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+#professional .right .cta-box a:hover::before {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+#professional .right .cta-box a:link, #professional .right .cta-box a:visited, #professional .right .cta-box a:focus {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 992px) {
+  #professional .right .cta-box a {
+    padding: 0.5rem 1rem;
+    margin-top: 0;
+    letter-spacing: 0rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #professional .right .cta-box a {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  #professional .right .cta-box a {
+    font-size: 1.3rem;
+  }
+}
 /*** Full Width Wine Banner ***/
 #fullWidthWineBanner {
   padding: 3rem 0;
@@ -597,8 +668,12 @@ hr.divider-red {
 }
 
 #fullWidthWineBanner .content {	
-    padding-left: 20%;
-    padding-right: 20%;  
+    padding-left: 15%;
+    padding-right: 15%;  
+}
+
+#fullWidthWineBanner img {	
+    border: 5px solid #fff;  
 }
 
 #fullWidthWineBanner .list {
@@ -608,7 +683,7 @@ hr.divider-red {
 #fullWidthWineBanner h2 {
   color: #fff;
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
@@ -1583,13 +1658,6 @@ hr.divider-red {
 
 .footer {
   color: #fff; }
-
-/** JERRY
-=======================================**/
-.red {
-  color: #fff; }
-  .red a {
-    color: #fff; }
 
 #locations-page-headers .container {
   display: flex;

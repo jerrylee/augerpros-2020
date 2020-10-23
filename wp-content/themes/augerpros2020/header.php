@@ -22,7 +22,7 @@
           <div class="top-bar__menu col-12 col-sm-6">
             <ul class="top-bar__menu--links">
               <li class="top-bar__menu--link"><a href="#">Videos</a></li>
-              <li class="top-bar__menu--link"><a href="http://216.194.173.241/~augerdev/blog/">Blog</a></li>
+              <li class="top-bar__menu--link"><a href="https://dev.augerpros.com/blog/">Blog</a></li>
               <li class="top-bar__menu--link"><a href="http://216.194.173.241/~augerdev/contact-us/">Contact Us</a></li>
               <li class="top-bar__menu--link"><a href="#">Coupons</a></li>
             </ul>

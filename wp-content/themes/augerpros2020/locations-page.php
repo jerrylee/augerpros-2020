@@ -16,6 +16,9 @@ style="background:url('<?php //the_field('location_page_header_image'); ?>') no-
 	</div>
 </section-->
 <?php get_template_part('partials/locations-professional'); ?>
+<div class="container">
+		<hr class="divider-red">
+	</div>
 <?php get_template_part('partials/locations-content'); ?>
 <div class="content">
 <?php get_template_part('partials/locations-cta-bar'); ?>

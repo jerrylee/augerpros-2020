@@ -6,7 +6,7 @@
               <h3><?php the_field('locations_h1_header'); ?></h3>
               <h2><?php the_field('locations_h2_header'); ?></h2>
               <p class="text-highlight">
-                <?php the_field('locations_first_colored_paragraph'); ?>
+                Call (214) 206-6580 today for efficient repairs and courteous, friendly service from AugerPros Plumbing.
               </p>
               <p>
                 <?php the_field('locations_large_paragraph'); ?>

@@ -69,6 +69,22 @@ hr.divider-red {
   }
 }
 
+.red {
+	color: #861316;
+}
+
+.cta {
+	background-color: #861316;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+	margin-bottom: 1rem;
+}
+
+.cta ul {
+	text-align: left;
+}
+
 .top-bar__menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -650,33 +666,72 @@ hr.divider-red {
 
     .cta-box {
       text-align: center;
-      font-size: 1.25rem;
+    }
+
+    .cta-box a {
+      position: relative;
+      display: inline-block;
+      font-size: 1.5rem;
+      letter-spacing: 0.2rem;
+      line-height: 1.2;
       font-weight: 700;
+      background-color: $primary-color;
       color: $white;
+      padding: 0.75rem 1.5rem;
+      margin-top: 0.5rem;
+      transition: color 0.5s ease 0s;
+      z-index: 1;
       width: 65%;
 
-      @include breakpoint(lg) {
-        padding: 0 1.5rem;
+      &:hover {
+        color: $primary-color;
       }
 
-      a {
-        &:link,
-        &:visited,
-        &:focus {
-          display: inline-block;
-          text-decoration: none;
-          background-color: $primary-color;
-          color: $white;
-          padding: 1rem;
-          outline: none;
-          cursor: pointer;
-          transition: all 0.3s;
+      &::before {
+        background-color: $silver;
+        content: '';
+        position: absolute;
+        height: calc(100% + 1rem);
+        width: calc(100% + 1rem);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: -1;
+        will-change: transform;
+        transform-origin: 50% 50%;
+        transition: transform 0.35s cubic-bezier(0.39, 0.58, 0.53, 1.37) 0s,
+          opacity 0.25s ease 0.1s;
+        pointer-events: none;
+        opacity: 0;
+      }
 
-          &:hover {
-            background-color: $secondary-color;
-            color: $primary-color;
-          }
-        }
+      &:hover::before {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+
+      &:link,
+      &:visited,
+      &:focus {
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+      }
+
+      @include breakpoint(lg) {
+        padding: 0.5rem 1rem;
+        margin-top: 0;
+        letter-spacing: 0rem;
+      }
+
+      @include breakpoint(xl) {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+        letter-spacing: 0.2rem;
+      }
+
+      @include breakpoint-min(1450px) {
+        font-size: 1.3rem;
       }
     }
   }
@@ -689,8 +744,8 @@ hr.divider-red {
   background-color: $red;
 	
   .content {
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 	
   .list {
@@ -700,15 +755,19 @@ hr.divider-red {
   h2 {
     color: $white;
     font-weight: 600;
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
   }
+	
+  img {
+	border: 5px solid #fff;	
+  }		
 
   ul {    
     padding: 1rem;
     margin: 0;
     list-style: none;
-  }
+  } 
 
   li {
     color: $primary-color;
@@ -1883,17 +1942,6 @@ hr.divider-red {
   color: #fff;
 }
 
-
-
-/** JERRY
-=======================================**/
-
-.red {
-  color:$white;
-  a {
-    color:$white;
-  }
-}
 #locations-page-headers {
   .container {
     display: flex;
